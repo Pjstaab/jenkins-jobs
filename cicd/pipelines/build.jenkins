@@ -28,19 +28,19 @@ podTemplate(label: label,
 
             stage('Dep') {
                 container('go') {
-                    sh 'make dep'
+                    sh 'echo dep'
                 }
             }
 
             stage('Test') {
                 container('go') {
-                    sh 'make test'
+                    sh 'echo test'
                 }
             }
 
             stage('Build') {
                 container('go') {
-                    sh 'make build'
+                    sh 'echo build'
                 }
             }
         }
