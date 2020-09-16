@@ -1,14 +1,14 @@
 #!/usr/bin/env groovy
 
-pipelineJob('build-jenkins-operator') {
-    displayName('Build jenkins-operator')
+pipelineJob('fake-build-jenkins-operator') {
+    displayName('Fake Build jenkins-operator')
 
     definition {
         cpsScm {
             scm {
                 git {
                     remote {
-                        url('https://github.com/jenkinsci/kubernetes-operator.git')
+                        url('https://github.com/Pjstaab/jenkins-jobs.git')
                         credentials('jenkins-operator')
                     }
                     branches('*/master')
